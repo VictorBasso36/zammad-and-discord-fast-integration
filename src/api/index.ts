@@ -121,7 +121,8 @@ router.post<{}, MessageResponse, any>(
             timestamp: new Date().toISOString(),
             footer: {
               text: "Sistema Zammad • Webhook Integration",
-              icon_url: "https://zammad.org/assets/images/logo.png",
+              icon_url:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Zammad_logo.svg/1200px-Zammad_logo.svg.png",
             },
           },
         ],
