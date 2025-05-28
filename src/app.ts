@@ -18,7 +18,9 @@ app.use(express.json());
 
 app.get<{}, MessageResponse>("/", (req, res) => {
   res.json({
-    message: "integrations - zammad to discord",
+    message: `integrations - zammad to discord - ${
+      process.env.DISCORD_WEBHOOK ? "configured" : "not configured"
+    }`,
   });
 });
 
