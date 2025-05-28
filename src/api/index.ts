@@ -4,14 +4,14 @@ import { Request, Response } from "express";
 
 const router = express.Router();
 
-router.get<{}, MessageResponse>("/", (req, res) => {
+router.get<{}, MessageResponse>("/discord", (req, res) => {
   res.json({
     message: "API - Hello World",
   });
 });
 
 router.post<{}, MessageResponse, any>(
-  "/",
+  "/discord",
   async (req: Request, res: Response) => {
     const body = req.body;
     const DISCORD_WEBHOOK = process.env.DISCORD_WEBHOOK_URL;
